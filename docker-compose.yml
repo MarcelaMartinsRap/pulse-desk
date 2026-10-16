@@ -1,0 +1,15 @@
+services:
+  database:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: pulse_desk
+      POSTGRES_USER: pulse_desk
+      POSTGRES_PASSWORD: local_development_only
+    ports:
+      - "5432:5432"
+    volumes:
+      - pulse_desk_postgres:/var/lib/postgresql/data
+
+volumes:
+  pulse_desk_postgres:
+

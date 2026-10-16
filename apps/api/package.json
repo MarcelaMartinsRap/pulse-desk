@@ -1,0 +1,9 @@
+{
+  "name": "@pulse-desk/api",
+  "private": true,
+  "scripts": {
+    "start:dev": "nest start --watch",
+    "test": "jest"
+  }
+}
+

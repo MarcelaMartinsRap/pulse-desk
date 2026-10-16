@@ -1,0 +1,19 @@
+{
+  "name": "pulse-desk",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Operations dashboard built as a Full Stack portfolio project.",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=@pulse-desk/web",
+    "dev:api": "npm run start:dev --workspace=@pulse-desk/api",
+    "db:up": "docker compose up -d database",
+    "db:down": "docker compose down"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
+
