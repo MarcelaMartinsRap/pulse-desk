@@ -1,26 +1,30 @@
 # Pulse Desk
 
-Painel de operações para acompanhar clientes, demandas e indicadores de atendimento.
+An operations dashboard for tracking clients, work items, and service metrics.
 
-## Objetivo
+## Why it exists
 
-Demonstrar uma aplicação Full Stack orientada a problemas reais: autenticação, cadastro de clientes e tarefas, API REST, métricas e rastreabilidade.
+Pulse Desk is a portfolio project designed around real product concerns: authentication, role-based access, client and task management, REST APIs, metrics, auditability, and maintainable architecture.
 
-## Stack planejada
+## Planned stack
 
-- Next.js + TypeScript no frontend
-- NestJS + TypeScript na API
-- PostgreSQL para dados relacionais
-- Redis para cache e filas futuras
-- Docker para ambiente reproduzível
+- **Web:** Next.js and TypeScript
+- **API:** NestJS and TypeScript
+- **Data:** PostgreSQL
+- **Performance & asynchronous work:** Redis and background queues
+- **Environment:** Docker
 
-## Escopo inicial
+## First release scope
 
-1. Login e perfis de acesso.
-2. Clientes e tarefas com status, prioridade e responsável.
-3. Dashboard com métricas de operação.
-4. Histórico de mudanças e documentação da API.
+1. Authentication and user roles.
+2. Clients and tasks with status, priority, and ownership.
+3. An operations dashboard with practical metrics.
+4. Change history and documented APIs.
 
-## Por que este projeto
+## Engineering goals
 
-Ele permite evidenciar modelagem de dados, APIs, regras de negócio, interface, testes e decisões de arquitetura — competências úteis para vagas Full Stack e Backend.
+The project is intentionally built to demonstrate data modelling, API design, business rules, tests, observability, and technical decisions that can evolve with the product.
+
+## Status
+
+Foundation in progress. The first milestone is a NestJS health endpoint backed by a local PostgreSQL environment.
