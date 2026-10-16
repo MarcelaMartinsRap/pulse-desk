@@ -1,30 +1,58 @@
 # Pulse Desk
 
-An operations dashboard for tracking clients, work items, and service metrics.
+> A production-minded operations workspace for teams that need a clear view of clients, work items, ownership, and service health.
 
-## Why it exists
+## The problem
 
-Pulse Desk is a portfolio project designed around real product concerns: authentication, role-based access, client and task management, REST APIs, metrics, auditability, and maintainable architecture.
+Operational teams often manage client requests, priorities, and follow-ups across disconnected tools. That creates unclear ownership, weak visibility into work in progress, and little historical context for decisions.
 
-## Planned stack
+Pulse Desk centralizes that workflow in one focused product: clients, tasks, responsibilities, status changes, and meaningful operational metrics.
 
-- **Web:** Next.js and TypeScript
-- **API:** NestJS and TypeScript
-- **Data:** PostgreSQL
-- **Performance & asynchronous work:** Redis and background queues
-- **Environment:** Docker
+## Product direction
 
-## First release scope
+- **Role-aware workspace** for collaborators and managers
+- **Client and work-item management** with ownership, priority, status, and history
+- **Operational dashboard** for workload, cycle time, and blocked work
+- **Audit-friendly activity trail** for key changes
+- **API-first design** to support integrations and future automation
 
-1. Authentication and user roles.
-2. Clients and tasks with status, priority, and ownership.
-3. An operations dashboard with practical metrics.
-4. Change history and documented APIs.
+## Architecture
 
-## Engineering goals
+```text
+Next.js web application
+          │
+          ▼
+NestJS REST API ─── PostgreSQL
+          │
+          ├──── Redis cache
+          └──── Background jobs and event processing
+```
 
-The project is intentionally built to demonstrate data modelling, API design, business rules, tests, observability, and technical decisions that can evolve with the product.
+## Engineering standards
+
+- Type-safe contracts with TypeScript
+- Validation and clear error responses at API boundaries
+- Relational data modelling with PostgreSQL
+- Docker-based local environment
+- Tests for business rules and integration points
+- Structured logs, API documentation, and CI checks as the product evolves
+
+## Technology
+
+| Area | Choice |
+| --- | --- |
+| Web | Next.js, React, TypeScript |
+| API | NestJS, TypeScript, REST |
+| Data | PostgreSQL |
+| Async & cache | Redis and queues |
+| Environment | Docker |
+| Quality | Jest, OpenAPI, GitHub Actions |
+
+## Delivery plan
+
+The first release focuses on authentication, roles, clients, tasks, and dashboard metrics. The next iterations add event processing, observability, and deployment automation.
 
 ## Status
 
-Foundation in progress. The first milestone is a NestJS health endpoint backed by a local PostgreSQL environment.
+Active development. The repository currently contains the product foundation and local environment definition; features are delivered incrementally with documentation and tests.
+
